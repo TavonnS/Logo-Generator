@@ -1,13 +1,5 @@
 <svg width: '300px' height: '200px'>
-        <function (answers) {
-        if(answers.shape === 'Circle') {
-            return circle;
-        } else if (answers.shape === 'Square') {
-            return rect;
-        } else {
-            return polygon;
-        }
-    } width: '300px' height: '200px' fill: 'blue' />
-            <text x="50%" y="50%" fill="red" text-anchor="middle">xxx</text>
+        <polygon points: '0,0 300,0 150,200' fill: 'undefined' />
+            <text x="50%" y="50%" fill="white" text-anchor="middle">EEE</text>
     </svg>     
     
