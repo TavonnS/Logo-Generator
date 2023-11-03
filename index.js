@@ -9,19 +9,24 @@ inquirer.prompt(prompt)
     // function for writing shape code based on type:
     const shapeChoice = function (answers) {
         if(answers.shape == 'Circle') {
-            return `circle cx="150" cy="100" r="100" fill="${answers.shapeColor}"`;
+            return `<circle cx="150" cy="100" r="100" fill="${answers.shapeColor}" />
+            <text x="50%" y="50%" fill="${answers.textColor}" alignment-baseline="middle" text-anchor="middle" font-size="50px">${answers.text}</text>
+            `;
         } else if (answers.shape == 'Square') {
-            return `rect width="200px" height="200px" fill="${answers.shapeColor}"`;
+            return `<rect width="200px" height="200px" fill="${answers.shapeColor}" />
+            <text x="33%" y="50%" fill="${answers.textColor}" alignment-baseline="middle" text-anchor="middle" font-size="50px">${answers.text}</text>
+            `;
         } else {
-            return `polygon points="0,0 300,0 150,200" fill="${answers.shapeColor}"`;
+            return `<polygon points="0,0 300,0 150,200" fill="${answers.shapeColor}" />
+            <text x="50%" y="50%" fill="${answers.textColor}" alignment-baseline="middle" text-anchor="middle" font-size="50px">${answers.text}</text>
+            `;
         }
     };
    
     const svgMake = 
-    `<svg width="300px" height="200px">
-        <${shapeChoice(answers.shape)} />
-            <text x="50%" y="50%" fill="${answers.textColor}" text-anchor="middle">${answers.text}</text>
-    </svg>     
+    `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        ${shapeChoice(answers)}
+     </svg>     
     `;
 
     fs.writeFile('./examples/logo.svg', svgMake, (err) => {

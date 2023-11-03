@@ -1,5 +1,6 @@
-<svg width="300px" height="200px">
-        <polygon points="0,0 300,0 150,200" fill="undefined" />
-            <text x="50%" y="50%" fill="white" text-anchor="middle">CCC</text>
-    </svg>     
+<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="0,0 300,0 150,200" fill="black" />
+            <text x="50%" y="50%" fill="red" alignment-baseline="middle" text-anchor="middle" font-size="50px">ZZZ</text>
+            
+     </svg>     
     
