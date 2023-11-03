@@ -6,7 +6,7 @@ const prompt = require('./lib/prompt');
 inquirer.prompt(prompt)
 .then((answers) => {
     console.log(answers);
-    // function for writing shape code based on type:
+    // function for writing shape code based on answers:
     const shapeChoice = function (answers) {
         if(answers.shape == 'Circle') {
             return `<circle cx="150" cy="100" r="100" fill="${answers.shapeColor}" />
